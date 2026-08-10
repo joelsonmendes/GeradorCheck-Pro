@@ -1,0 +1,28 @@
+{
+  "name": "geradorcheck-pro-functions",
+  "version": "1.0.0",
+  "private": true,
+  "main": "lib/index.js",
+  "type": "commonjs",
+  "engines": { "node": "22" },
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "grant-admin": "npm run build && node lib/grant-admin.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.6.2",
+    "firebase-admin": "^14.2.0",
+    "firebase-functions": "^7.3.2",
+    "helmet": "^8.3.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.2.0",
+    "typescript": "^7.0.2"
+  }
+}
