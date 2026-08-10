@@ -1,0 +1,11 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // O aplicativo acessa os dados comerciais exclusivamente pela API.
+    // O Admin SDK das Cloud Functions ignora estas regras de forma segura.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
